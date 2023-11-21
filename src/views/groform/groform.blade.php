@@ -13,10 +13,10 @@
                         @foreach($section['fields'] as $input)
                             <div class="col-md-12 mb-3">
                                 @if($input['title'])
-                                    <label for="{{$input['id']}}" class="col-form-label d-flex justify-content-between align-items-center">
+                                    <label for="{{$input['id']}}" class="col-form-label">
                                         <span>{{$input['title']}}</span>
                                         @if(isset($input['subtitle']))
-                                            <small class="text-muted">{!!$input['subtitle']!!}</small>
+                                            <br><small class="text-muted">{!!$input['subtitle']!!}</small>
                                         @endif
                                     </label>
                                 @endif
