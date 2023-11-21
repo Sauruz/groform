@@ -17,7 +17,7 @@ class GroformProvider extends ServiceProvider
         $this->loadViewComponentsAs('', $this->viewComponents());
 
         $this->publishes([
-            __DIR__.'/../views/groform/' => resource_path('vendor/views/groform/')
+            __DIR__.'/../views/groform/' => resource_path('views/vendor/groform/')
         ], 'groform-views');
 
         $this->publishes([
