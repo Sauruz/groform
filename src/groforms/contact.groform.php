@@ -41,6 +41,35 @@ return [
                     ]
                 ],
                 [
+                    'id' => 'integrations',
+                    'title' => 'Gewenste integraties',
+                    'subtitle' => 'meerdere opties mogelijk, laat leeg als antwoord er niet tussen staat',
+                    'type' => 'multiselect',
+                    'rule' => '',
+                    'options' => [
+                        'Mollie Payments' => 'Mollie Payments',
+                        'Mailgun' => 'Mailgun',
+                        'Stripe' => 'Stripe',
+                        'PayPal' => 'PayPal',
+                        'iDeal' => 'iDeal',
+                        'Amazon S3' => 'Amazon S3',
+                        'Digital Ocean Spaces' => 'Digital Ocean Spaces',
+                        'Algolia' => 'Algolia',
+                        'Twilio' => 'Twilio',
+                        'Pusher' => 'Pusher',
+                        'SendGrid' => 'SendGrid',
+                        'AWS (Amazon Web Services)' => 'AWS (Amazon Web Services)',
+                        'Google Maps API' => 'Google Maps API',
+                        'OAuth Providers (e.g., Google, Facebook)' => 'OAuth Providers (e.g., Google, Facebook)',
+                        'Firebase' => 'Firebase',
+                        'Mailchimp' => 'Mailchimp',
+                        'Nexmo' => 'Nexmo',
+                        'Trello' => 'Trello',
+                        'Salesforce' => 'Salesforce',
+                        'ChatGPT' => 'ChatGPT'
+                    ]
+                ],
+                [
                     'id' => 'subject',
                     'title' => 'Subject',
                     'type' => 'text',

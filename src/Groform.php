@@ -74,4 +74,45 @@ class Groform
         }
         return '';
     }
+
+    /**
+     * Access a property in an object by dot notation
+     * @param $object
+     * @param string $path
+     * @return mixed
+     */
+    public static function accessProperty($object, string $path)
+    {
+        //Handle arrays (if path = address[address1] > $object['address']['address1'])
+        $path = str_replace(']', '', str_replace('[', '.', $path));
+        $expl = explode('.', $path);
+        if(count($expl) > 1) {
+            try {
+                $res = $object[$expl[0]];
+                foreach ($expl as $i => $v) {
+                    if ($i > 0) {
+                        $res = $res[$v];
+                    }
+                }
+                return $res;
+            } catch (\Exception $e) {}
+        }
+
+        if(is_array($object)) {
+            try {
+                if(is_string($object[$path])) {
+                    $date = Carbon::parse($object[$path]);
+                    return $date;
+                }
+            } catch (\Exception $e) {
+                //its not a date, continue
+            }
+
+            return $object[$path] ?? null;
+        }
+
+        return array_reduce(explode('.', $path), function ($o, $p) {
+            return is_numeric($p) ? ($o[$p] ?? null) : ($o->$p ?? null);
+        }, $object);
+    }
 }
