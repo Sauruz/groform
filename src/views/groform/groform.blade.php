@@ -1,3 +1,34 @@
+<!-- Error handling -->
+@if ($errors->all())
+    <div id="form-error" style="margin-top: -200px; padding-bottom: 200px;"> </div>
+    <div class="alert alert-danger bg-danger border-danger text-white">
+        {{$errors->first()}}
+    </div>
+    <script type="application/javascript">
+        location.hash = "form-error";
+    </script>
+@endif
+@if (session()->has('success'))
+    <div id="form-success" style="margin-top: -200px; padding-bottom: 200px;"></div>
+    <script type="application/javascript">
+        location.hash = "form-success";
+    </script>
+    <div class="alert alert-success bg-success border-success text-white">
+        {{ session('success')}}
+    </div>
+@endif
+@if (session()->has('error'))
+    <div id="form-success" style="margin-top: -200px; padding-bottom: 200px;"></div>
+    <script type="application/javascript">
+        location.hash = "form-success";
+    </script>
+    <div class="alert alert-danger bg-danger border-danger text-white">
+        {{ session('error')}}
+    </div>
+@endif
+<!-- /Error handling -->
+
+
 @if (!session('success'))
     <form method="post" class="needs-validation" novalidate enctype="multipart/form-data" @if($action) action="{{$action}}" @endif >
         @csrf
