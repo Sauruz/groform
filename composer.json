@@ -1,9 +1,9 @@
 {
-    "name": "gromatics/groform",
+    "name": "sauruz/groform",
     "description": "A Laravel package to create forms easily",
     "autoload": {
         "psr-4": {
-            "Gromatics\\Groform\\": "src/"
+            "Sauruz\\Groform\\": "src/"
         }
     },
     "authors": [

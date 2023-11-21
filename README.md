@@ -8,7 +8,7 @@ By default, Composer pulls in packages from Packagist so you’ll have to make a
 "repositories": [
     {
     "type": "vcs",
-    "url": "https://github.com/Sauruz/groform"
+    "url": "https://github.com/sauruz/groform"
     }
 ]
 ````
@@ -16,7 +16,7 @@ By default, Composer pulls in packages from Packagist so you’ll have to make a
 Now composer will also look into this repository for any installable package. Execute the following command to install the package:
 
 ````
-composer require Sauruz/groform
+composer require sauruz/groform
 ````
 
 Now, open the config/app.php file and scroll down to the providers array. In that array, there should be a section for the package service providers. Add the following line of code in that section:
@@ -25,7 +25,7 @@ Now, open the config/app.php file and scroll down to the providers array. In tha
 /*
 * Package Service Providers...
 */
-Gromatics\Groform\Providers\GroformProvider::class
+Sauruz\Groform\Providers\GroformProvider::class
 ```
 
 ### Publish files
@@ -55,7 +55,7 @@ To use the example contact form simply add this to a view:
 to validate the contact form you can do this in your controller:
 
 ````
-use Gromatics\Groform\Groform;
+use Sauruz\Groform\Groform;
 use Illuminate\Http\Request;
 
 class FormController extends Controller

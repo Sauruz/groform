@@ -1,9 +1,9 @@
 <?php
 
-namespace Gromatics\Groform\View\Components;
+namespace Sauruz\Groform\View\Components;
 
 use Illuminate\View\Component;
-use Gromatics\Groform\Groform as GroformService;
+use Sauruz\Groform\Groform as GroformService;
 
 class Groform extends Component
 {

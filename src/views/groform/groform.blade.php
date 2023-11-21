@@ -30,7 +30,7 @@
                                     @else
                                         @include('groform::groform.inputs.text')
                                     @endif
-                                    @error(Gromatics\Groform\Groform::arrayToDotNotation($input['id']))
+                                    @error(Sauruz\Groform\Groform::arrayToDotNotation($input['id']))
                                     <small class="text-danger">{{$message}}</small>
                                     @enderror
                                 @endif

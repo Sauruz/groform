@@ -1,14 +1,14 @@
 <input type="file"
        id="{{$input['id']}}"
        name="{{$input['id']}}"
-       class="form-control w-100 @error(Gromatics\Groform\Groform::arrayToDotNotation($input['id'])) is-invalid @enderror @isset($input['class']) {{$input['class']}} @endif"
+       class="form-control w-100 @error(Sauruz\Groform\Groform::arrayToDotNotation($input['id'])) is-invalid @enderror @isset($input['class']) {{$input['class']}} @endif"
        placeholder="{{isset($input['placeholder']) ? $input['placeholder'] :  $input['title']}}"
-       value="{{old(Gromatics\Groform\Groform::arrayToDotNotation($input['id']))}}"
-    {{ Gromatics\Groform\Groform::formSetRequired($input)}} >
+       value="{{old(Sauruz\Groform\Groform::arrayToDotNotation($input['id']))}}"
+    {{ Sauruz\Groform\Groform::formSetRequired($input)}} >
 
 @if(isset($model))
     @php
-        $explode = explode('/', Gromatics\Groform\Groform::accessProperty($model, $input['id']));
+        $explode = explode('/', Sauruz\Groform\Groform::accessProperty($model, $input['id']));
     @endphp
     <small>{{ end($explode)}}<br></small>
 @endif

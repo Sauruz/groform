@@ -1,6 +1,6 @@
 <?php
 
-namespace Gromatics\Groform;
+namespace Sauruz\Groform;
 
 class Groform
 {

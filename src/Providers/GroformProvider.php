@@ -1,8 +1,7 @@
 <?php
 
-namespace Gromatics\Groform\Providers;
+namespace Sauruz\Groform\Providers;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class GroformProvider extends ServiceProvider
@@ -29,7 +28,7 @@ class GroformProvider extends ServiceProvider
     protected function viewComponents(): array
     {
         return [
-            \Gromatics\Groform\View\Components\Groform::class
+            \Sauruz\Groform\View\Components\Groform::class
         ];
     }
 }
