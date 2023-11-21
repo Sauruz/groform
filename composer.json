@@ -1,0 +1,16 @@
+{
+    "name": "gromatics/groform",
+    "description": "A Laravel package to create forms easily",
+    "autoload": {
+        "psr-4": {
+            "Gromatics\\Groform\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guido Rus",
+            "email": "Guido@gromatics.nl"
+        }
+    ],
+    "require": {}
+}
