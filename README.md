@@ -8,7 +8,7 @@ By default, Composer pulls in packages from Packagist so you’ll have to make a
 "repositories": [
     {
     "type": "vcs",
-    "url": "https://github.com/sauruz/groform"
+    "url": "https://github.com/Sauruz/groform"
     }
 ]
 ````
@@ -16,7 +16,7 @@ By default, Composer pulls in packages from Packagist so you’ll have to make a
 Now composer will also look into this repository for any installable package. Execute the following command to install the package:
 
 ````
-composer require sauruz/groform
+composer require Sauruz/groform
 ````
 
 Now, open the config/app.php file and scroll down to the providers array. In that array, there should be a section for the package service providers. Add the following line of code in that section:
