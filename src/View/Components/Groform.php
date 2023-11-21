@@ -2,6 +2,7 @@
 
 namespace Sauruz\Groform\View\Components;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\View\Component;
 use Sauruz\Groform\Groform as GroformService;
 
@@ -36,6 +37,11 @@ class Groform extends Component
      */
     public function render()
     {
-        return view('groform::groform.groform');
+        if(View::exists('vendor.groform.groform')) {
+            return view('vendor.groform.groform');
+        } else {
+            return view('groform::groform.groform');
+        }
+
     }
 }

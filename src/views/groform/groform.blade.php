@@ -21,12 +21,12 @@
                                     </label>
                                 @endif
                                 @if(!empty($input))
-                                    @if(View::exists('groform.inputs.' . $input['type']))
-                                        @include('groform.inputs.' . $input['type'])
+                                    @if(View::exists('vendor.groform.inputs.' . $input['type']))
+                                        @include('vendor.groform.inputs.' . $input['type'])
                                     @elseif(View::exists('groform::groform.inputs.' . $input['type']))
                                         @include('groform::groform.inputs.' . $input['type'])
-                                    @elseif(View::exists('groform.inputs.text'))
-                                        @include('groform.inputs.text')
+                                    @elseif(View::exists('vendor.groform.inputs.text'))
+                                        @include('vendor.groform.inputs.text')
                                     @else
                                         @include('groform::groform.inputs.text')
                                     @endif
