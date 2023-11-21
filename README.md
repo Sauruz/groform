@@ -66,3 +66,12 @@ class FormController extends Controller
     }
 }
 ````
+
+### Default values
+You can add default values by feeding a model to the form like this:
+
+````
+<x-groform form="contact" :model="$contactModel"/>
+````
+
+
