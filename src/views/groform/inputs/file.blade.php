@@ -2,7 +2,7 @@
        id="{{$input['id']}}"
        name="{{$input['id']}}"
        class="form-control w-100 @error(Sauruz\Groform\Groform::arrayToDotNotation($input['id'])) is-invalid @enderror @isset($input['class']) {{$input['class']}} @endif"
-       placeholder="{{isset($input['placeholder']) ? $input['placeholder'] :  $input['title']}}"
+       placeholder="{{isset($input['placeholder']) ? __($input['placeholder']) :  __($input['title'])}}"
        value="{{old(Sauruz\Groform\Groform::arrayToDotNotation($input['id']))}}"
     {{ Sauruz\Groform\Groform::formSetRequired($input)}} >
 

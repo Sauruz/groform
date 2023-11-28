@@ -7,6 +7,6 @@
         <option value="{{$k}}"
                 @if(old($input['id']) && $k == old($input['id'])  || isset($model) && $k == Sauruz\Groform\Groform::accessProperty($model, $input['id']) ) selected @endif
                 @if(isset($input['disabledOptions']) && in_array($k, $input['disabledOptions']) && $k !== Sauruz\Groform\Groform::accessProperty($model, $input['id'])) disabled @endif
-        >{{$v}}</option>
+        >@lang($v)</option>
     @endforeach
 </select>
