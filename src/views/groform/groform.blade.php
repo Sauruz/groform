@@ -36,7 +36,7 @@
             <div class="row">
                 @if(isset($form['show_section_labels']) && $form['show_section_labels'])
                     <div class="col-md-4">
-                        <h4>{{$section['label']}}</h4>
+                        <h4>@lang($section['label'])</h4>
                     </div>
                 @endif
                 <div class="@if(isset($form['show_section_titles']) && $form['show_section_titles']) col-md-8 @else col-12 @endif">
@@ -45,9 +45,9 @@
                             <div class="col-md-12 mb-3">
                                 @if($input['title'])
                                     <label for="{{$input['id']}}" class="col-form-label">
-                                        <span>{{$input['title']}}</span>
+                                        <span>@lang($input['title'])</span>
                                         @if(isset($input['subtitle']))
-                                            <br><small class="text-muted">{!!$input['subtitle']!!}</small>
+                                            <br><small class="text-muted">@lang($input['subtitle'])</small>
                                         @endif
                                     </label>
                                 @endif
