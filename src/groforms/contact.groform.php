@@ -10,6 +10,16 @@ return [
             'label' => 'Basic information',
             'fields' => [
                 [
+                    'id' => 'groformcaptcha',
+                    'title' => '',
+                    'type' => 'groformcaptcha',
+                    'rule' => ['required', function (string $attribute, mixed $value, Closure $fail) {
+                        if (intval($value) !== session('groformcaptcha_sum')) {
+                            $fail("The {$attribute} is invalid.");
+                        }
+                    }]
+                ],
+                [
                     'id' => 'full_name',
                     'class' => 'w-50',
                     'title' => 'Name',
